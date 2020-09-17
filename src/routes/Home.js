@@ -5,7 +5,7 @@ import Bweet from "components/Bweet";
 const Home = ({ userObj }) => {
   const [bweet, setBweet] = useState("");
   const [bweets, setBweets] = useState([]);
-  const [attachment, setAttachment] = useState();
+  const [attachment, setAttachment] = useState("");
 
   useEffect(() => {
     dbService.collection("bweets").onSnapshot((snapshot) => {
