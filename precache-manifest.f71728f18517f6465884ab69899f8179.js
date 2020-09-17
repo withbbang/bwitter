@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd426c167e6a449fd069690af2b6cdff",
+    "revision": "4d0f7309799ea73faaa4e990f8e24e5a",
     "url": "/bwitter/index.html"
   },
   {
