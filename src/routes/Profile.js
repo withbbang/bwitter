@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { authService, dbService } from "fbase";
+import React, { useState } from "react";
+import { authService } from "fbase";
 import { useHistory } from "react-router-dom";
 
 export default ({ refreshUser, userObj }) => {
   const history = useHistory();
-  const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
+  const [newDisplayName, setNewDisplayName] = useState("");
   const onLogOutClick = () => {
     authService.signOut();
     history.push("/");
   };
 
-  const getMyBweets = async () => {
-    const bweets = await dbService
-      .collection("bweets")
-      .where("creatorId", "==", userObj.uid)
-      .orderBy("createdAt")
-      .get();
-  };
+  // const getMyBweets = async () => {
+  //   await dbService
+  //     .collection("bweets")
+  //     .where("creatorId", "==", userObj.uid)
+  //     .orderBy("createdAt")
+  //     .get();
+  // };
 
   const onChange = (e) => {
     const {
@@ -35,22 +35,32 @@ export default ({ refreshUser, userObj }) => {
     }
   };
 
-  useEffect(() => {
-    getMyBweets();
-  }, []);
+  // useEffect(() => {
+  //   getMyBweets();
+  // }, []);
 
   return (
-    <>
-      <form onSubmit={onSubmit}>
+    <div className="container">
+      <form onSubmit={onSubmit} className="profileForm">
         <input
           onChange={onChange}
           type="text"
           placeholder="Display Name"
-          value={newDisplayName ? newDisplayName : ""}
+          value={newDisplayName}
+          className="formInput"
         />
-        <input type="submit" value="Update Profile" />
+        <input
+          type="submit"
+          value="Update Profile"
+          className="formBtn"
+          style={{
+            marginTop: 10,
+          }}
+        />
       </form>
-      <button onClick={onLogOutClick}>Log Out</button>
-    </>
+      <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+        Log Out
+      </span>
+    </div>
   );
 };

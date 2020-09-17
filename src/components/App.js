@@ -18,6 +18,7 @@ function App() {
         setIsLoggedIn(true);
         setInit(true);
       } else {
+        setUserObj(null);
         setIsLoggedIn(false);
         setInit(true);
       }
