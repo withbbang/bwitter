@@ -72,9 +72,10 @@ const Bweet = ({ bweetObj, isOwner }) => {
         <>
           {" "}
           <h4>{bweetObj.text}</h4>
-          <span style={{ marginTop: "5px", fontSize: "12px" }}>
-            {formatDate(bweetObj.createdAt)}
-          </span>
+          <div className="bweet__info__box">
+            <div>{formatDate(bweetObj.createdAt)}</div>
+            <div className="bweet__owner">{bweetObj.username}</div>
+          </div>
           {bweetObj.attachmentUrl && <img src={bweetObj.attachmentUrl} />}
           {isOwner && (
             <div className="bweet__actions">

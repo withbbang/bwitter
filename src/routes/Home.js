@@ -10,6 +10,7 @@ const Home = ({ userObj }) => {
     dbService.collection("bweets").onSnapshot((snapshot) => {
       const bweetArray = snapshot.docs.map((doc) => ({
         id: doc.id,
+        username: userObj.displayName ? userObj.displayName : "undefined",
         ...doc.data(),
       }));
       setBweets(bweetArray);

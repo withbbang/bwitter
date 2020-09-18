@@ -194,6 +194,20 @@ form {
   margin-top: 10px;
 }
 
+.bweet__info__box {
+  margin-top: 5px;
+  font-size: 12px;
+  display: flex;
+}
+
+.bweet__owner {
+  margin-left: 30px;
+  overflow: hidden;
+  max-width: 70px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bweet__actions {
   position: absolute;
   right: 10px;
