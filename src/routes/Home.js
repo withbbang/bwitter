@@ -10,7 +10,7 @@ const Home = ({ userObj }) => {
     text: "이상한거 올리면 지울거임",
     createdAt: Date.now(),
     attachmentUrl:
-      "https://cdn.ppomppu.co.kr/zboard/data3/2016/1127/m_1480256512_0JoauJI8sI.png",
+      "https://firebasestorage.googleapis.com/v0/b/bwitter-4a489.appspot.com/o/angry%20frog.jpg?alt=media&token=2c02adfd-1c2f-45c8-9009-058c6a8d912b",
   };
 
   useEffect(() => {
