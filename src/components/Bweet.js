@@ -6,6 +6,22 @@ import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 const Bweet = ({ bweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
   const [newBweet, setNewBweet] = useState(bweetObj.text);
+
+  const formatDate = (date) => {
+    const _date = new Date(date);
+    return (
+      _date.getFullYear() +
+      "-" +
+      (_date.getMonth() + 1) +
+      "-" +
+      _date.getDate() +
+      " " +
+      _date.getHours() +
+      ":" +
+      _date.getMinutes()
+    );
+  };
+
   const onDeleteClick = async () => {
     const ok = window.confirm("Are you sure you want to delete thie bweet?");
 
@@ -56,6 +72,9 @@ const Bweet = ({ bweetObj, isOwner }) => {
         <>
           {" "}
           <h4>{bweetObj.text}</h4>
+          <span style={{ marginTop: "5px", fontSize: "12px" }}>
+            {formatDate(bweetObj.createdAt)}
+          </span>
           {bweetObj.attachmentUrl && <img src={bweetObj.attachmentUrl} />}
           {isOwner && (
             <div className="bweet__actions">
