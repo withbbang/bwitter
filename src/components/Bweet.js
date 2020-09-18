@@ -3,12 +3,14 @@ import { dbService, storageService } from "fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
-const Bweet = ({ bweetObj, isOwner }) => {
+const Bweet = ({ bweetObj, isOwner, isNoti, username }) => {
   const [editing, setEditing] = useState(false);
   const [newBweet, setNewBweet] = useState(bweetObj.text);
 
   const formatDate = (date) => {
     const _date = new Date(date);
+    const minute =
+      _date.getMinutes() > 9 ? _date.getMinutes() : "0" + _date.getMinutes();
     return (
       _date.getFullYear() +
       "-" +
@@ -18,7 +20,7 @@ const Bweet = ({ bweetObj, isOwner }) => {
       " " +
       _date.getHours() +
       ":" +
-      _date.getMinutes()
+      minute
     );
   };
 
@@ -73,8 +75,8 @@ const Bweet = ({ bweetObj, isOwner }) => {
           {" "}
           <h4>{bweetObj.text}</h4>
           <div className="bweet__info__box">
-            <div>{formatDate(bweetObj.createdAt)}</div>
-            <div className="bweet__owner">{bweetObj.username}</div>
+            <div>{isNoti ? "< Notice >" : formatDate(bweetObj.createdAt)}</div>
+            <div className="bweet__owner">{username ? username : "-"}</div>
           </div>
           {bweetObj.attachmentUrl && <img src={bweetObj.attachmentUrl} />}
           {isOwner && (
