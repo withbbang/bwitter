@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bwitter/static/css/main.cf992ee7.chunk.css",
-    "main.js": "/bwitter/static/js/main.a2d41a30.chunk.js",
-    "main.js.map": "/bwitter/static/js/main.a2d41a30.chunk.js.map",
+    "main.js": "/bwitter/static/js/main.f3e6312a.chunk.js",
+    "main.js.map": "/bwitter/static/js/main.f3e6312a.chunk.js.map",
     "runtime-main.js": "/bwitter/static/js/runtime-main.30e9bc64.js",
     "runtime-main.js.map": "/bwitter/static/js/runtime-main.30e9bc64.js.map",
     "static/js/2.e77843bf.chunk.js": "/bwitter/static/js/2.e77843bf.chunk.js",
     "static/js/2.e77843bf.chunk.js.map": "/bwitter/static/js/2.e77843bf.chunk.js.map",
     "index.html": "/bwitter/index.html",
-    "precache-manifest.62c64e6afc6ee31f12fc04e589aecd44.js": "/bwitter/precache-manifest.62c64e6afc6ee31f12fc04e589aecd44.js",
+    "precache-manifest.d28e9256fe4d8293244fe23c68190e1d.js": "/bwitter/precache-manifest.d28e9256fe4d8293244fe23c68190e1d.js",
     "service-worker.js": "/bwitter/service-worker.js",
     "static/css/main.cf992ee7.chunk.css.map": "/bwitter/static/css/main.cf992ee7.chunk.css.map",
     "static/js/2.e77843bf.chunk.js.LICENSE.txt": "/bwitter/static/js/2.e77843bf.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.30e9bc64.js",
     "static/js/2.e77843bf.chunk.js",
     "static/css/main.cf992ee7.chunk.css",
-    "static/js/main.a2d41a30.chunk.js"
+    "static/js/main.f3e6312a.chunk.js"
   ]
 }
