@@ -76,7 +76,7 @@ const Bweet = ({ bweetObj, isOwner, isNoti, username }) => {
           <h4>{bweetObj.text}</h4>
           <div className="bweet__info__box">
             <div>{isNoti ? "< Notice >" : formatDate(bweetObj.createdAt)}</div>
-            <div className="bweet__owner">{username ? username : "-"}</div>
+            <div className="bweet__owner">{bweetObj.username ? bweetObj.username : "-"}</div>
           </div>
           {bweetObj.attachmentUrl && <img src={bweetObj.attachmentUrl} />}
           {isOwner && (
