@@ -12,7 +12,6 @@ const Home = ({ userObj }) => {
     createdAt: Date.now(),
     attachmentUrl:
       "https://firebasestorage.googleapis.com/v0/b/bwitter-4a489.appspot.com/o/angry%20frog.jpg?alt=media&token=2c02adfd-1c2f-45c8-9009-058c6a8d912b",
-    username:"Administer",
   };
 
   // const ownerName = async () => {

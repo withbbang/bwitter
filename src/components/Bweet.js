@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { dbService, storageService } from "fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { defaultAuth } from "fbase";
 
-const Bweet = ({ bweetObj, isOwner, isNoti, username }) => {
+const Bweet = ({ bweetObj, isOwner, isNoti }) => {
   const [editing, setEditing] = useState(false);
   const [newBweet, setNewBweet] = useState(bweetObj.text);
+  const [username, setUsername] = useState('-')
+
+  useEffect(() => {
+    getCreator()
+  }, [])
+
+  const getCreator = async () => {
+    if(bweetObj.creatorId){
+      try{
+        const creator = await defaultAuth.getUser(bweetObj.creatorId)
+        console.log("creator : ", creator)
+      }catch(e){
+        console.log(e)
+      }
+      // setUsername(creator.displayName)
+    }
+  }
 
   const formatDate = (date) => {
     const _date = new Date(date);
@@ -76,7 +94,7 @@ const Bweet = ({ bweetObj, isOwner, isNoti, username }) => {
           <h4>{bweetObj.text}</h4>
           <div className="bweet__info__box">
             <div>{isNoti ? "< Notice >" : formatDate(bweetObj.createdAt)}</div>
-            <div className="bweet__owner">{bweetObj.username ? bweetObj.username : "-"}</div>
+            <div className="bweet__owner">{bweetObj.creatorId ? !bweetObj.displayName ? bweetObj.displayName : "-" : "Administer"}</div>
           </div>
           {bweetObj.attachmentUrl && <img src={bweetObj.attachmentUrl} />}
           {isOwner && (
