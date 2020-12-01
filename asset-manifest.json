@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/bwitter/static/css/main.cf992ee7.chunk.css",
-    "main.js": "/bwitter/static/js/main.f3e6312a.chunk.js",
-    "main.js.map": "/bwitter/static/js/main.f3e6312a.chunk.js.map",
+    "main.js": "/bwitter/static/js/main.f45adc10.chunk.js",
+    "main.js.map": "/bwitter/static/js/main.f45adc10.chunk.js.map",
     "runtime-main.js": "/bwitter/static/js/runtime-main.30e9bc64.js",
     "runtime-main.js.map": "/bwitter/static/js/runtime-main.30e9bc64.js.map",
-    "static/js/2.e77843bf.chunk.js": "/bwitter/static/js/2.e77843bf.chunk.js",
-    "static/js/2.e77843bf.chunk.js.map": "/bwitter/static/js/2.e77843bf.chunk.js.map",
+    "static/js/2.5200e1c3.chunk.js": "/bwitter/static/js/2.5200e1c3.chunk.js",
+    "static/js/2.5200e1c3.chunk.js.map": "/bwitter/static/js/2.5200e1c3.chunk.js.map",
     "index.html": "/bwitter/index.html",
-    "precache-manifest.d28e9256fe4d8293244fe23c68190e1d.js": "/bwitter/precache-manifest.d28e9256fe4d8293244fe23c68190e1d.js",
+    "precache-manifest.dd64aa2c9b22fec3d221a8420c9c0cd2.js": "/bwitter/precache-manifest.dd64aa2c9b22fec3d221a8420c9c0cd2.js",
     "service-worker.js": "/bwitter/service-worker.js",
     "static/css/main.cf992ee7.chunk.css.map": "/bwitter/static/css/main.cf992ee7.chunk.css.map",
-    "static/js/2.e77843bf.chunk.js.LICENSE.txt": "/bwitter/static/js/2.e77843bf.chunk.js.LICENSE.txt"
+    "static/js/2.5200e1c3.chunk.js.LICENSE.txt": "/bwitter/static/js/2.5200e1c3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.30e9bc64.js",
-    "static/js/2.e77843bf.chunk.js",
+    "static/js/2.5200e1c3.chunk.js",
     "static/css/main.cf992ee7.chunk.css",
-    "static/js/main.f3e6312a.chunk.js"
+    "static/js/main.f45adc10.chunk.js"
   ]
 }
