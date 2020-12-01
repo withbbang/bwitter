@@ -17,7 +17,6 @@ const Bweet = ({ bweetObj, isOwner, isNoti }) => {
     if(bweetObj.creatorId){
       try{
         const creator = await defaultAuth.getUser(bweetObj.creatorId)
-        console.log("creator : ", creator)
       }catch(e){
         console.log(e)
       }

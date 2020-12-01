@@ -34,8 +34,6 @@ function App() {
     });
   };
 
-  console.log(authService.currentUser)
-
   return (
     <>
       {init ? (
